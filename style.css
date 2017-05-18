@@ -30,6 +30,10 @@ html, body{
     background-color: #000000;
 }
 
+.tabButton:hover {
+	color: #ddaa66 !important;
+}
+
 .tabButton {
 	border-bottom: 12px solid #000000;
 	padding-top: 16px;
@@ -49,7 +53,7 @@ html, body{
 
 .tabButton.active {
 	border-bottom: 12px solid #ffcc00;
-	color: #ffcc00;
+	color: #ffcc00 !important;
 }
 
 .tabButton.inact {
