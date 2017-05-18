@@ -7,22 +7,27 @@
 		<link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
 	</head>
 	<body>
-		<div class="wrapper">	
-			<div class="tabButton active" onclick="openTab(event,'Build')">Build</div>
-			<div class="tabButton" onclick="openTab(event,'Paris')">Paris</div>
-			<div class="tabButton" onclick="openTab(event,'Tokyo')">Tokyo</div>
+		<div class="wrapper">
+			<div class="tabButton unlocked active" onclick="openTab(event,'Work')">Work</div>	
+			<div class="tabButton unlocked" onclick="openTab(event,'Build')">Build</div>
+			<div class="tabButton unlocked" onclick="openTab(event,'Research')">Research</div>
+			<div class="tabButton unlocked" onclick="openTab(event,'Command')">Command</div>
 		</div>
-		<div id="Build" class="tabContent">
-			<h2>Build</h2>
+		<div id="Work" class="tabContent">
+			<h1>Work</h1>
+			<p>Go work</p>
+		</div>
+		<div id="Build" class="tabContent" style="display:none">
+			<h1>Build</h1>
 			<p>Make your computer</p>
 		</div>
-		<div id="Paris" class="tabContent" style="display:none">
-			<h2>Paris</h2>
-			<p>Paris is the capital of France.</p> 
+		<div id="Research" class="tabContent" style="display:none">
+			<h1>Research</h1>
+			<p>Research technologies</p> 
 		</div>
-		<div id="Tokyo" class="tabContent" style="display:none">
-			<h2>Tokyo</h2>
-			<p>Tokyo is the capital of Japan.</p>
+		<div id="Command" class="tabContent" style="display:none">
+			<h1>Command</h1>
+			<p>Designate tasks</p>
 		</div>
 	</body>
 </html>
