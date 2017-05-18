@@ -38,9 +38,7 @@ html, body{
 	padding-right: 12px;
 	margin-right: 8px;
 
-	color: #ffcc00;
 	cursor: pointer;
-	cursor: hand;
 	font-family: 'Vollkorn', serif;
 	font-size: 1.6em;
 }
@@ -51,4 +49,9 @@ html, body{
 
 .tabButton.active {
 	border-bottom: 12px solid #ffcc00;
+	color: #ffcc00;
+}
+
+.tabButton.inact {
+	color: #bb8866;
 }
