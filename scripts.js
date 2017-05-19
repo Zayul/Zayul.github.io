@@ -1,3 +1,5 @@
+var money = 0;
+
 function openTab(event, tabName) {
     var i;
 
@@ -8,9 +10,17 @@ function openTab(event, tabName) {
 
     tabButton = document.getElementsByClassName("tabButton")
     for (i = 0; i < document.getElementsByClassName("tabButton").length; i++) {
-    	tabButton[i].className = tabButton[i].className.replace(" active", " inact")
+    	tabButton[i].className = tabButton[i].className.replace(" active", " inActive")
     }
 
-    event.currentTarget.className = event.currentTarget.className.replace(" inact", " active");
+    event.currentTarget.className = event.currentTarget.className.replace(" inActive", " active");
     document.getElementById(tabName).style.display = "block"; 
+}
+
+function gameLoop() {
+
+	money += 1;
+
+	document.getElementById("moneyCounter").innerHTML = money;
+	console.log("Done");
 }

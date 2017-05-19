@@ -30,6 +30,15 @@ html, body{
     background-color: #000000;
 }
 
+.info {
+	font-family: 'Droid serif', serif;
+	font-size: 1.6em;
+	color: #ffcc00 !important;
+	padding: 12px;
+	align-self: center;
+	margin-left: auto;
+}
+
 .tabButton:hover {
 	color: #ddaa66 !important;
 }
@@ -41,6 +50,7 @@ html, body{
 	padding-left: 12px;
 	padding-right: 12px;
 	margin-right: 8px;
+	-webkit-user-select: none;
 
 	cursor: pointer;
 	font-family: 'Vollkorn', serif;
@@ -48,7 +58,7 @@ html, body{
 }
 
 .tabButton.locked {
-	display: none;
+	display: none !important;
 }
 
 .tabButton.active {
@@ -56,6 +66,6 @@ html, body{
 	color: #ffcc00 !important;
 }
 
-.tabButton.inact {
+.tabButton.inActive {
 	color: #bb8866;
 }

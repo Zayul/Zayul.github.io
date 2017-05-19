@@ -8,26 +8,29 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<div class="tabButton unlocked active" onclick="openTab(event,'Work')">Work</div>	
-			<div class="tabButton unlocked inact" onclick="openTab(event,'Build')">Build</div>
-			<div class="tabButton unlocked inact" onclick="openTab(event,'Research')">Research</div>
-			<div class="tabButton unlocked inact" onclick="openTab(event,'Command')">Command</div>
+			<div class="tabButton unlocked active" onclick="openTab(event,'work')">Work</div>	
+			<div class="tabButton locked inActive" onclick="openTab(event,'build')">Build</div>
+			<div class="tabButton locked inActive" onclick="openTab(event,'research')">Research</div>
+			<div class="tabButton locked inActive" onclick="openTab(event,'command')">Command</div>
+			<div id="moneyCounter" class="info money unlocked"></div>
 		</div>
-		<div id="Work" class="tabContent">
+		<div id="work" class="tabContent">
+			<div class="workButton" onclick="runButton(event)"></div>
 			<h1>Work</h1>
 			<p>Go work</p>
 		</div>
-		<div id="Build" class="tabContent" style="display:none">
+		<div id="build" class="tabContent" style="display:none">
 			<h1>Build</h1>
 			<p>Make your computer</p>
 		</div>
-		<div id="Research" class="tabContent" style="display:none">
+		<div id="research" class="tabContent" style="display:none">
 			<h1>Research</h1>
 			<p>Research technologies</p> 
 		</div>
-		<div id="Command" class="tabContent" style="display:none">
+		<div id="command" class="tabContent" style="display:none">
 			<h1>Command</h1>
 			<p>Designate tasks</p>
 		</div>
+		<script>setInterval(gameLoop, 1);</script>
 	</body>
 </html>
