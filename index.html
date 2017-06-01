@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Game</title>
-		<script src="scripts.js"></script>
-		<link rel="stylesheet" href="style.css"> 
-		<link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
-	</head>
-	<body>
-		<div class="wrapper">
-			<div class="tabButton unlocked active" onclick="openTab(event,'work')">Work</div>	
-			<div class="tabButton locked inActive" onclick="openTab(event,'build')">Build</div>
-			<div class="tabButton locked inActive" onclick="openTab(event,'research')">Research</div>
-			<div class="tabButton locked inActive" onclick="openTab(event,'command')">Command</div>
-			<div id="moneyCounter" class="info money unlocked"></div>
-		</div>
-		<div id="work" class="tabContent">
-			<div class="workButton" onclick="runButton(event)"></div>
-			<h1>Work</h1>
-			<p>Go work</p>
-		</div>
-		<div id="build" class="tabContent" style="display:none">
-			<h1>Build</h1>
-			<p>Make your computer</p>
-		</div>
-		<div id="research" class="tabContent" style="display:none">
-			<h1>Research</h1>
-			<p>Research technologies</p> 
-		</div>
-		<div id="command" class="tabContent" style="display:none">
-			<h1>Command</h1>
-			<p>Designate tasks</p>
-		</div>
-		<script>setInterval(gameLoop, 1);</script>
-	</body>
+
+<head>
+    <title>Game</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Lato|Vollkorn" rel="stylesheet">
+</head>
+
+<body>
+    <div class="topBar">
+        <div class="navigation">
+            <div class="tabButton unlocked active" onclick="openTab(event,'work')">These</div>
+            <div class="tabButton unlocked inActive" onclick="openTab(event,'build')">Are</div>
+            <div class="tabButton unlocked inActive" onclick="openTab(event,'research')">Demo</div>
+            <div class="tabButton unlocked inActive" onclick="openTab(event,'command')">Tabs</div>
+        </div>
+        <div class="info">
+            <div id="moneyCounter" class="counter unlocked"></div>
+            <div id="iqCounter" class="counter unlocked"></div>
+        </div>
+    </div>
+    <div id="work" class="tabContent">
+        <h1>This text</h1>
+        <!--<div class="workButton" onclick="runButton(event)">Work</div>-->
+    </div>
+    <div id="build" class="tabContent" style="display:none">
+        <h1>Is hidden</h1>
+    </div>
+    <div id="research" class="tabContent" style="display:none">
+        <h1>When you go to</h1>
+    </div>
+    <div id="command" class="tabContent" style="display:none">
+        <h1>The next tab</h1>
+    </div>
+    <script>
+    setInterval(delTime, 1);
+    </script>
+</body>
+
 </html>

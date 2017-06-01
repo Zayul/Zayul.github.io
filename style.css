@@ -1,5 +1,5 @@
 h1 {
-	color: black;
+    color: black;
     text-align: left;
     font-family: 'Vollkorn', serif;
     font-size: 3em;
@@ -14,58 +14,68 @@ p {
     margin: 18px;
 }
 
-html, body{
-  margin:0 !important;
-  padding:0 !important;
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-.wrapper {
-	display: flex;
-	flex-direction: row;
-	justify-content: auto;
+.topBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: auto;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #000000;
+    background-color: #555555;
 }
 
 .info {
-	font-family: 'Droid serif', serif;
-	font-size: 1.6em;
-	color: #ffcc00 !important;
-	padding: 12px;
-	align-self: center;
-	margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
 }
 
-.tabButton:hover {
-	color: #ddaa66 !important;
+.counter {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.6em;
+    color: #ffd633 !important;
+    padding: auto;
+    margin-right: 18px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
 }
 
 .tabButton {
-	border-bottom: 12px solid #000000;
-	padding-top: 16px;
-	padding-bottom: 4px;
-	padding-left: 12px;
-	padding-right: 12px;
-	margin-right: 8px;
-	-webkit-user-select: none;
-
-	cursor: pointer;
-	font-family: 'Vollkorn', serif;
-	font-size: 1.6em;
+    border-bottom: 12px solid #555555;
+    padding: 16px 12px 0px 12px;
+    margin-right: 8px;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-family: 'Vollkorn', serif;
+    font-size: 1.6em;
 }
 
 .tabButton.locked {
-	display: none !important;
+    display: none !important;
 }
 
 .tabButton.active {
-	border-bottom: 12px solid #ffcc00;
-	color: #ffcc00 !important;
+    border-bottom: 12px solid #ffd633;
+    color: #ffd633 !important;
 }
 
 .tabButton.inActive {
-	color: #bb8866;
+    color: #ebb147;
+}
+
+.tabButton:hover {
+    color: #ffd633 !important;
+}
+
+.workButton {
+    margin-left: 18px;
 }
