@@ -1,23 +1,41 @@
-var money = 0;
-var iq = 0;
 var d = new Date();
 var prev = d.getTime()-1;
 var now = d.getTime();
+var elapse = 0;
+
+var money = 0;
+var iq = 0;
+
 var currentTask = "none";
 
 function delTime() {
     d = new Date();
     prev = now;
     now = d.getTime();
-    var elapse = now - prev;
+    elapse = now - prev;
     gameLoop(elapse);
 }
 
 function gameLoop(elapse) {
-    money += elapse;
-    iq += elapse;
-    //document.getElementById("iqCounter").innerHTML = "IQ " + iq;
-    document.getElementById("moneyCounter").innerHTML = "Counter: " + money;
+    if(currentTask == 'work') {
+        money += elapse;
+    }
+    else if (currentTask == 'research') {
+        iq += elapse;
+    }
+    document.getElementById("iqCounter").innerHTML = "IQ " + iq;
+    document.getElementById("moneyCounter").innerHTML = "$" + money;
+}
+
+function runButton(event, buttonName) {
+    switch(buttonName) {
+        case 'workButton':
+            currentTask = 'work'
+            break;
+        case 'researchButton':
+            currentTask = 'research'
+            break;
+    }
 }
 
 function openTab(event, tabName) {
@@ -35,4 +53,5 @@ function openTab(event, tabName) {
 
     event.currentTarget.className = event.currentTarget.className.replace(" inActive", " active");
     document.getElementById(tabName).style.display = "block";
+    console.log(tabName);
 }

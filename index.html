@@ -11,28 +11,25 @@
 <body>
     <div class="topBar">
         <div class="navigation">
-            <div class="tabButton unlocked active" onclick="openTab(event,'work')">These</div>
-            <div class="tabButton unlocked inActive" onclick="openTab(event,'build')">Are</div>
-            <div class="tabButton unlocked inActive" onclick="openTab(event,'research')">Demo</div>
-            <div class="tabButton unlocked inActive" onclick="openTab(event,'command')">Tabs</div>
+            <div class="tabButton unlocked active" id="workButton" onclick="openTab(event,'work')">Work</div>
+            <div class="tabButton unlocked inActive" id="researchButton" onclick="openTab(event,'research')">Research</div>
+            <div class="tabButton unlocked inActive" id="buildButton" onclick="openTab(event,'build')">Build</div>
+            <div class="tabButton unlocked inActive" id="commandButton" onclick="openTab(event,'command')">Command</div>
         </div>
         <div class="info">
             <div id="moneyCounter" class="counter unlocked"></div>
             <div id="iqCounter" class="counter unlocked"></div>
         </div>
     </div>
-    <div id="work" class="tabContent">
-        <h1>Click the next tab!</h1>
-        <!--<div class="workButton" onclick="runButton(event)">Work</div>-->
+    <div class="tabContent" id="work">
+        <div class="actButton" id="workButton" onclick="runButton(event, 'workButton')">Work</div>
     </div>
-    <div id="build" class="tabContent" style="display:none">
-        <h1>Isn't this fun?</h1>
+    <div class="tabContent" id="research" style="display:none">
+        <div class="actButton" id="researchButton" onclick="runButton(event, 'researchButton')">Research</div>
     </div>
-    <div id="research" class="tabContent" style="display:none">
-        <h1>Although this may seem simple,</h1>
+    <div class="tabContent" id="build" style="display:none">
     </div>
-    <div id="command" class="tabContent" style="display:none">
-        <h1>It took quite a while!</h1>
+    <div class="tabContent" id="command" style="display:none">
     </div>
     <script>
     setInterval(delTime, 1);
